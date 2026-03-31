@@ -13,6 +13,7 @@ RUN apt-get update && \
    groupadd -r appgroup && \
    useradd -r -g appgroup appuser
 
+RUN pip install --upgrade pip httpcore httpx
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
